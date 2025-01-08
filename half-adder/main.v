@@ -8,6 +8,7 @@ module main;
 	reg b;
 	wire s; // sum
 	wire c; // carry
+	integer i, j;
 
 	half_adder uut (
 		.a(a),
@@ -18,10 +19,13 @@ module main;
 
 	initial begin
         $monitor("Time: %0d, a: %b, b: %b, s: %b, c: %b", $time, a, b, s, c);
-        a = 0; b = 0; #10;  
-        a = 0; b = 1; #10; 
-        a = 1; b = 0; #10;  
-        a = 1; b = 1; #10;  
+        for (i = 0; i <= 1; i = i + 1) begin
+        	for (j = 0; j <= 1; j = j + 1) begin
+				a = i;
+				b = j;
+				#10;
+			end
+		end
         $finish;    
 	end
 endmodule
