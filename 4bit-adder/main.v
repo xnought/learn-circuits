@@ -74,7 +74,7 @@ module main;
 	);
 
 	initial begin
-        $monitor("[Time: %0d] %b + %b = %b\t(overflow=%b)\n", $time, a, b, sum, overflow);
+        $monitor("[Time: %0d]\t%b + %b = %b\t(overflow=%b)\n", $time, a, b, sum, overflow);
 		a = 4'b0000; b = 4'b0001; #10;
 		a = 4'b1010; b = 4'b0001; #10;
 		a = 4'b0100; b = 4'b0100; #10;
