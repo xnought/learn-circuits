@@ -7,23 +7,22 @@ endmodule
 // https://i.sstatic.net/E0itr.png
 module full_adder(input wire a, input wire b, input wire i, output wire s, output wire c);
 	wire s0;
-	wire c0;
+	wire cout[1:0];
 	half_adder ha0 ( // a+b -> s0, c0
 		.a(a),
 		.b(b),
 		.s(s0),
-		.c(c0)
+		.c(cout[0])
 	);
 
-	wire c1;
 	half_adder ha1 ( // s0+i -> s, c1
 		.a(s0),
 		.b(i),
 		.s(s),
-		.c(c1)
+		.c(cout[1])
 	);
 
-	assign c = c0|c1; // c0 or c1 -> c
+	assign c = cout[0]|cout[1]; // c0 or c1 -> c
 endmodule
 
 module main;
