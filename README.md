@@ -9,7 +9,7 @@ Setup: directory with project and within a valid circuit like program (Verilog o
 - [Hello World](./hello-world/main.v)
 - [Half Adder](./half-adder/main.v)
 - [Full Adder](./full-adder/main.v)
-- Bit Adders: [4bit](./4bit-adder/main.v), [8bit](./8bit-adder/main.v), [nbit](./nbit-adder/main.v)
+- Unsighed Integer Adders: [4bit](./4bit-adder/main.v), [8bit](./8bit-adder/main.v), [nbit](./nbit-adder/main.v)
 
 ## Running
 
