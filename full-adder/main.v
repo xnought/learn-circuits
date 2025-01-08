@@ -7,7 +7,7 @@ endmodule
 // https://i.sstatic.net/E0itr.png
 module full_adder(input wire a, input wire b, input wire in_carry, output wire sum, output wire out_carry);
 	wire first_add;
-	wire half_adder_carries[1:0];
+	wire [1:0] half_adder_carries;
 
 	half_adder ha0 ( 
 		.a(a),
