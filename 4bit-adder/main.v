@@ -31,27 +31,27 @@ module adder4(
 	output wire overflow
 );
 	wire [2:0] adder_carries;
-	half_adder digit0 (
+	half_adder bit0 (
 		.a(a[0]),
 		.b(b[0]),
 		.sum(sum[0]),
 		.carry(adder_carries[0])
 	);
-	full_adder digit1 (
+	full_adder bit1 (
 		.a(a[1]),
 		.b(b[1]),
 		.in_carry(adder_carries[0]),
 		.sum(sum[1]),
 		.out_carry(adder_carries[1])
 	);
-	full_adder digit2 (
+	full_adder bit2 (
 		.a(a[2]),
 		.b(b[2]),
 		.in_carry(adder_carries[1]),
 		.sum(sum[2]),
 		.out_carry(adder_carries[2])
 	);
-	full_adder digit3 (
+	full_adder bit3 (
 		.a(a[3]),
 		.b(b[3]),
 		.in_carry(adder_carries[2]),
