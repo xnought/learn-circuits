@@ -10,6 +10,13 @@ Setup: directory with project and within a valid circuit like program (Verilog o
 - [Half Adder](./half-adder/main.v)
 - [Full Adder](./full-adder/main.v)
 - Unsigned Integer Adders: [4bit](./4bit-adder/main.v), [8bit](./8bit-adder/main.v), [nbit](./nbit-adder/main.v)
+- Signed Integer Adders 
+- Integer Multiplication
+- Integer Division
+- Floating point addition
+- Floating point multiplication
+- Floating point division
+- bit registers
 
 ## Running
 
