@@ -8,20 +8,19 @@ endmodule
 module full_adder(input wire a, input wire b, input wire in_carry, output wire sum, output wire out_carry);
 	wire first_add;
 	wire half_adder_carries[1:0];
+
 	half_adder ha0 ( 
 		.a(a),
 		.b(b),
 		.sum(first_add),
 		.carry(half_adder_carries[0])
 	);
-
 	half_adder ha1 (
 		.a(first_add),
 		.b(in_carry),
 		.sum(sum),
 		.carry(half_adder_carries[1])
 	);
-
 	assign out_carry = half_adder_carries[0]|half_adder_carries[1];
 endmodule
 
